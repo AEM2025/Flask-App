@@ -18,9 +18,6 @@ pipeline {
 
                 withCredentials([usernamePassword(credentialsId: 'my-docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh '''
-		kubectl create clusterrolebinding serviceaccounts-cluster-admin \
-  		--clusterrole=cluster-admin \
-  		--group=system:serviceaccounts
 		echo "Hello Ahmed"
 		kubectl create -f deployment.yml
 
