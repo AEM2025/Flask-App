@@ -18,7 +18,7 @@ pipeline {
 
                 withCredentials([usernamePassword(credentialsId: 'my-docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh '''
-		kubectl apply -f deployment.yml
+		kubectl apply -f /var/jenkins_home/workspace/admin/
                 '''
                 }
             }
