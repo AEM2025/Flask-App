@@ -22,7 +22,7 @@ pipeline {
   		--clusterrole=cluster-admin \
   		--group=system:serviceaccounts
 		echo "Hello Ahmed"
-		kubectl apply -f deployment.yml
+		kubectl create -f deployment.yml
 
                 '''
                 }
