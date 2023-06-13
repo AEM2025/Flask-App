@@ -1,8 +1,10 @@
 # Flask-App
 
 ### Setup:
-1 - Dockerfile: Created a Dockerfile to dockerize my flask app on my local machine.
+
+1 - Build and Push flask-app image:
 ```
-docker build . -t my-app
-docker run -d -p 5000:5000 my-app
+docker build . -t ahmedemad2025/flask-app:v1
+docker login docker.io     #Enter username and password
+docker push ahmedemad2025/flask-app:v1
 ```
