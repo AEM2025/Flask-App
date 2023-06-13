@@ -18,7 +18,9 @@ pipeline {
 
                 withCredentials([usernamePassword(credentialsId: 'my-docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh '''
-		kubectl apply -f 
+		echo "Hello Ahmed"
+		kubectl apply -f deployment.yml
+
                 '''
                 }
             }
