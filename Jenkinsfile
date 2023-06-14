@@ -20,7 +20,7 @@ pipeline {
                 sh '''
 		echo "Hello Ahmed"
   		
-		kubectl apply -f deployment.yml
+		kubectl apply -f deployment/
 
                 '''
                 }
